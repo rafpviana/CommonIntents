@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.unifor.commonintents.MainActivity"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:text="Digite a Mensagem do Alarme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewAlarmMessageId"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextAlarmMessageId"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:text="Digite a hora do alarme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewAlarmHourId"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextAlarmHourId"
+                android:textSize="14sp"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:text="Digite os minutos do alarme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewAlarmMinutesId"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextAlarmMinutesId"
+                android:textSize="14sp"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:text="Criar Alarme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonCreateAlarmId"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:text="Digite o numero da chamada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewPhoneNumberId"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextPhoneNumberId"
+                android:textSize="14sp"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:text="Fazer Chamada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonCreateCallId"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:text="Digite os termos da pesquisa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewSearchId"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editTextSearchId"
+                android:textSize="14sp"
+                android:textStyle="normal|bold"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:text="Fazer Pesquisa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttonCreateSearchId"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
