@@ -9,14 +9,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import java.sql.Time;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Timer;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button buttonCreateAlarm;
     private EditText editTextAlarmMessage;
-    private EditText editTextAlarmHour;
-    private EditText editTextAlarmMinutes;
+    private EditText editTextAlarmTime;
     private String alarmMessage;
+    private Date alarmTime;
     private int alarmHour;
     private int alarmMinutes;
 
@@ -34,18 +43,34 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         editTextAlarmMessage = (EditText) findViewById(R.id.editTextAlarmMessageId);
-        editTextAlarmHour = (EditText) findViewById(R.id.editTextAlarmHourId);
-        editTextAlarmMinutes = (EditText) findViewById(R.id.editTextAlarmMinutesId);
+        editTextAlarmTime = (EditText) findViewById(R.id.editTextAlarmTimeId);
 
         buttonCreateAlarm = (Button) findViewById(R.id.buttonCreateAlarmId);
         buttonCreateAlarm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 alarmMessage = editTextAlarmMessage.getText().toString();
-                alarmHour = Integer.parseInt(editTextAlarmHour.getText().toString());
-                alarmMinutes = Integer.parseInt(editTextAlarmMinutes.getText().toString());
+                String str = editTextAlarmTime.getText().toString();
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm");
+                Date date = null;
+                try {
+                    date = simpleDateFormat.parse(str);
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                alarmTime = date;
+                Calendar calendar = Calendar.getInstance();
+                try{
+                    calendar.setTime(alarmTime);
+                    alarmHour = calendar.get(Calendar.HOUR_OF_DAY);
+                    alarmMinutes = calendar.get(Calendar.MINUTE);
 
-                createAlarm(alarmMessage, alarmHour, alarmMinutes);
+                    createAlarm(alarmMessage, alarmHour, alarmMinutes);
+                }
+                catch (Exception e){
+                    Toast.makeText(MainActivity.this, "Formato de hora inválido", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 

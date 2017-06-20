@@ -45,7 +45,7 @@
                 android:textStyle="normal|bold" />
 
             <TextView
-                android:id="@+id/textViewAlarmHourId"
+                android:id="@+id/textViewAlarmTimeId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="2dp"
@@ -62,29 +62,12 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editTextAlarmHourId"
+                    android:id="@+id/editTextAlarmTimeId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/editTextAlarmMinutesId"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="number"
-                    android:textAlignment="center"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold" />
+                    android:inputType="time" />
 
             </LinearLayout>
 
